@@ -1,0 +1,297 @@
+<section id="content-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <uib-tabset active="active">
+                    <uib-tab index="0" heading="Validación estilo TS">
+                        <form name="form1" novalidate>
+                            <div class="col-md-12">
+                                <div class="form-group" ng-class="{ 'has-error': form1.name.$touched && form1.name.$invalid }">
+                                    <label for="name">Nombre completo</label>
+                                    <input type="text" class="form-control" id="name" name="name" ng-model="Home.register.name" ng-minlength="10" placeholder="Nombre" ng-pattern="/^[a-zA-Z\s]*$/" required>
+                                    <div class="help-block" ng-messages="form1.name.$error" ng-if="form1.name.$touched">
+                                        <p ng-message="minlength"> El tamaño minimo es de 10 caracteres</p>
+                                        <p ng-message="required">Tu nombre es requerido.</p>
+                                        <p ng-message="pattern">Solo deben ser letras.</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="email">Correo electrónico</label>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Correo" ng-model="Home.register.email" required>
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="address">Dirección completa</label>
+                                    <input type="text" class="form-control" id="address" name="address" placeholder="Dirección" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="neighborhood">Colonia</label>
+                                    <input type="text" class="form-control" id="neighborhood" name="neighborhood" placeholder="Colonia" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="country">País</label>
+                                    <input type="text" class="form-control" id="country" name="country" placeholder="País" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="city">Ciudad</label>
+                                    <input type="text" class="form-control" id="city" name="city" placeholder="Ciudad" required>
+                                </div>
+
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="zip">Código postal</label>
+                                    <input type="text" class="form-control" id="zip" name="zip" placeholder="Código postal" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="state">Estado</label>
+                                    <input type="text" class="form-control" id="state" name="state" placeholder="Estado" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="mobil">Celular</label>
+                                    <input type="text" class="form-control" id="mobil" name="mobil" placeholder="celular" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Teléfono</label>
+                                    <input type="text" class="form-control" id="phone" name="phone" placeholder="teléfono">
+
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <button class="btn btn-blue pull-right" type="submit">
+                                    Registrarme
+                                </button>
+                            </div>
+                        </form>
+                    </uib-tab>
+                    <uib-tab index="1" heading="Validacion  ngMessages">
+                        <form name="form" novalidate>
+                            <div class="col-md-12">
+                                <div class="form-group" ng-class="{ 'has-error': form.name.$touched && form.name.$invalid }">
+                                    <label for="name">Nombre completo</label>
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Nombre" ng-model="Home.register.fullName" required>
+
+                                    <div class="help-block" ng-messages="form.name.$error" ng-if="form.name.$touched">
+
+                                        <p ng-message="required">Tu nombre es requerido.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group" ng-class="{ 'has-error': form.email.$touched && form.email.$invalid }">
+                                    <label for="email">Correo electrónico</label>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Correo" ng-model="Home.register.email" required>
+
+                                    <div class="help-block" ng-messages="form.email.$error" ng-if="form.email.$touched">
+                                        <p ng-message="email">Debe ser un correo electronico valido.</p>
+
+                                        <p ng-message="required">Este campo es requerido.</p>
+                                    </div>
+                                </div>
+                                <div class="form-group" ng-class="{ 'has-error': form.address.$touched && form.address.$invalid }">
+                                    <label for="address">Dirección completa</label>
+                                    <input type="text" class="form-control" id="address" name="address" placeholder="Dirección" ng-model="Home.register.address"
+                                        required>
+
+                                        <div class="help-block" ng-messages="form.address.$error" ng-if="form.address.$touched">
+                                            <p ng-message="required">Este campo es requerido.</p>
+                                        </div>
+                                </div>
+                                <div class="form-group" ng-class="{ 'has-error': form.neighborhood.$touched && form.neighborhood.$invalid }">
+                                    <label for="neighborhood">Colonia</label>
+                                    <input type="text" class="form-control" id="neighborhood" name="neighborhood" placeholder="Colonia" ng-model="Home.register.neighborhood"
+                                        required>
+
+                                        <div class="help-block" ng-messages="form.neighborhood.$error" ng-if="form.neighborhood.$touched">
+                                            <p ng-message="required">Este campo es requerido.</p>
+                                        </div>
+                                </div>
+                                <div class="form-group" ng-class="{ 'has-error': form.country.$touched && form.country.$invalid }">
+                                    <label for="country">País</label>
+                                    <input type="text" class="form-control" id="country" name="country" placeholder="País" ng-model="Home.register.country" required>
+
+                                    <div class="help-block" ng-messages="form.city.$error" ng-if="form.country.$touched">
+                                        <p ng-message="required">Este campo es requerido.</p>
+                                    </div>
+                                </div>
+                                <div class="form-group" ng-class="{ 'has-error': form.city.$touched && form.city.$invalid }">
+                                    <label for="city">Ciudad</label>
+                                    <input type="text" class="form-control" id="city" name="city" placeholder="Ciudad" ng-model="Home.register.city" required>
+
+                                    <div class="help-block" ng-messages="form.city.$error" ng-if="form.city.$touched">
+                                        <p ng-message="required">Este campo es requerido.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group" ng-class="{ 'has-error': form.zip.$touched && form.zip.$invalid }">
+                                    <label for="zip">Código postal</label>
+                                    <input type="text" class="form-control" id="zip" name="zip" placeholder="Código postal" ng-model="Home.register.zip" ng-pattern="/^[0-9]{5}$/"
+                                        required>
+
+                                        <div class="help-block" ng-messages="form.zip.$error" ng-if="form.zip.$touched">
+                                            <p ng-message="pattern">Código postal no valido.</p>
+
+                                            <p ng-message="required">Este campo es requerido.</p>
+                                        </div>
+                                </div>
+
+                                <div class="form-group" ng-class="{ 'has-error': form.state.$touched && form.state.$invalid }">
+                                    <label for="state">Estado</label>
+                                    <input type="text" class="form-control" id="state" name="state" placeholder="Estado" ng-model="Home.register.state" required>
+
+                                    <div class="help-block" ng-messages="form.state.$error" ng-if="form.state.$touched">
+                                        <p ng-message="required">Este campo es requerido.</p>
+                                    </div>
+                                </div>
+                                <div class="form-group" ng-class="{ 'has-error': form.mobil.$touched && form.mobil.$invalid }">
+                                    <label for="mobil">Celular</label>
+                                    <input type="text" class="form-control" id="mobil" name="mobil" placeholder="celular" ng-model="Home.register.mobil" required>
+
+                                    <div class="help-block" ng-messages="form.mobil.$error" ng-if="form.mobil.$touched">
+                                        <p ng-message="required">Este campo es requerido.</p>
+                                    </div>
+                                </div>
+                                <div class="form-group" ng-class="{ 'has-error': form.phone.$touched && form.phone.$invalid }">
+                                    <label for="phone">Teléfono</label>
+                                    <input type="text" class="form-control" id="phone" name="phone" placeholder="teléfono" ng-model="Home.register.phone">
+
+                                    <div class="help-block" ng-messages="form.phone.$error" ng-if="form.phone.$touched">
+                                        <p ng-message="required">Este campo es requerido.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <button class="btn btn-blue pull-right" type="submit" ng-disabled="form.$invalid">
+                                    Registrarme
+                                </button>
+                            </div>
+                        </form>
+                    </uib-tab>
+                </uib-tabset>
+
+            </div>
+            <div class="col-md-5">
+                <uib-tabset active="active">
+                    <uib-tab index="0" heading="Teoria">
+                        <div class="page-header">
+                            <!-- https://www.sitepoint.com/easy-form-validation-angularjs-ngmessages/ -->
+                            <!-- https://scotch.io/tutorials/angularjs-form-validation-with-ngmessages -->
+                            <h3>Angular <small>Validación de formularios</small></h3>
+                        </div>
+                        <p>Este módulo nos ayuda específicamente a mostrar mensajes de error desde la validación de formularios,
+                            y nos apoyaremos con las propiedades que nos proporciona Angular en los formularios y nos que
+                            nos ayudan a validarlos.
+                        </p>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped table-hover">
+                                <thead>
+                                    <tr>
+                                        <td>
+                                            Propiedad
+                                        </td>
+                                        <td>
+                                            Clases
+                                        </td>
+                                        <td>
+                                            Descripción
+                                        </td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="success">
+                                            $valid
+                                        </td>
+                                        <td>
+                                            ng-valid
+                                        </td>
+                                        <td>
+                                            <em class="text-info">Boolean</em> Indica si un elemento es actualmente válido
+                                            según las reglas que ha colocado.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="danger">
+                                            $invalid
+                                        </td>
+                                        <td>
+                                            ng-invalid
+                                        </td>
+                                        <td>
+                                            <em class="text-info">Boolean</em> TIndica si un elemento es actualmente inválido
+                                            según las reglas que ha colocado.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="active">
+                                            $pristine
+                                        </td>
+                                        <td>
+                                            ng-pristine
+                                        </td>
+                                        <td>
+                                            <em class="text-info">Boolean</em> True si el formulario/input <strong>no ha sido</strong>                                            utilizado aún.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="warning">
+                                            $dirty
+                                        </td>
+                                        <td>
+                                            ng-dirty
+                                        </td>
+                                        <td>
+                                            <em class="text-info">Boolean</em> True si el formulario/input <strong>has</strong>                                            ha sido usado.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="warning">
+                                            $touched
+                                        </td>
+                                        <td>
+                                            ng-touched
+                                        </td>
+                                        <td>
+                                            <em class="text-info">Boolean</em> True si el inputo <strong>has</strong> ha
+                                            sido "bluereado".
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <h3>ACCESO A PROPIEDADES DE FORMULARIO ANGULAR</h3>
+                        <ul>
+                            <li><strong>Para acceder a las propiedades del formulario:</strong> <code>&lt;form name&gt;.&lt;angular property&gt;</code></li>
+                            <li><strong>Para acceder a las propiedades del input:</strong> <code>&lt;form name&gt;.&lt;input name&gt;.&lt;angular property&gt;</code></li>
+                        </ul>
+                    </uib-tab>
+                    <uib-tab index="0" heading="Más teoria">
+                        <h3>Validación de reglas</h3>
+                        <p>Angular proporciona muchas reglas de validación que podemos usar además de <code>ng-minlength</code>                            y <code>ng-maxlength</code>.</p>
+                        <p>Estos son los parámetros disponibles para una entrada Angular para crear reglas de validación.</p>
+                        <pre><code><span class="tag">&lt;input</span><span class="pln">
+  </span><span class="atn">ng-model</span><span class="pun">=</span><span class="atv">"string"</span><span class="pln">
+  [</span><span class="atn">name</span><span class="pun">=</span><span class="atv">"string"</span><span class="pln">]
+  [</span><span class="atn">required</span><span class="pun">=</span><span class="atv">"string"</span><span class="pln">]
+  [</span><span class="atn">ng-required</span><span class="pun">=</span><span class="atv">"boolean"</span><span class="pln">]
+  [</span><span class="atn">ng-minlength</span><span class="pun">=</span><span class="atv">"number"</span><span class="pln">]
+  [</span><span class="atn">ng-maxlength</span><span class="pun">=</span><span class="atv">"number"</span><span class="pln">]
+  [</span><span class="atn">ng-pattern</span><span class="pun">=</span><span class="atv">"string"</span><span class="pln">]
+  [</span><span class="atn">ng-change</span><span class="pun">=</span><span class="atv">"string"</span><span class="pln">]
+  [</span><span class="atn">ng-trim</span><span class="pun">=</span><span class="atv">"boolean"</span><span class="pln">]</span><span class="tag">&gt;</span><span class="pln">
+...
+</span><span class="tag">&lt;/input&gt;</span></code></pre>
+
+                    </uib-tab>
+                </uib-tabset>
+
+            </div>
+        </div>
+    </div>
+</section>

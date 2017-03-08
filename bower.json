@@ -1,0 +1,18 @@
+{
+  "name": "tingsystems",
+  "version": "0.0.1",
+  "description": "Web for Tingsystems",
+  "dependencies": {
+    "angular-material": "^1.1.3",
+    "bootstrap": "^3.3.7"
+  },
+    "overrides": {
+    "bootstrap": {
+      "main": [
+        "dist/css/bootstrap.css",
+        "less/bootstrap.less",
+        "dist/js/bootstrap.js"
+      ]
+    }
+  }
+}
