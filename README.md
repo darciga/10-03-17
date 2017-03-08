@@ -12,7 +12,6 @@ Then install bower dependencies
 $ bower install
 ```
 Finally run the server
-
 ```sh
 $ gulp templates && gulp
 ```
