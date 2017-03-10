@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es" ng-app="mony">
+<html lang="es" ng-app="monica">
 
 <head>
     <meta charset="utf-8" />
@@ -18,7 +18,7 @@
     <!-- endbuild -->
 </head>
 
-<body ng-cloak>
+<body ng-cloak ng-controller="HomeCtrl as Home">
     <md-toolbar class="md-accent">
         <div class="md-toolbar-tools">
         </div>
@@ -26,54 +26,41 @@
     <md-card>
         <md-card-header>
             <md-card-header-text>
-                <span class="md-title">Mi Monica &#128525;.</span>
-                <span class="md-subhead">Bienvenida a mi vida.</span>
+                <span class="md-title">{{Home.title}} &#128525;</span>
+                <span class="md-subhead">{{Home.subheadCard}}</span>
             </md-card-header-text>
         </md-card-header>
     </md-card>
     <md-card>
         <md-card-title>
             <md-card-title-text>
-                <span class="md-headline">¡Hola bonita!</span>
+                <span class="md-headline">{{Home.headlineCard}}</span>
             </md-card-title-text>
         </md-card-title>
         <md-card-content>
-            <p class="md-body-1 text-justify" style="font-size: 16px;">Estoy muy contento de estar contigo, que me permitas conocerte, descubrir en ti esa ternura al abrazarme, esa
-                luz que irradias cuando sonríes, esa calma que me transmites cuando me miras. Y más aún el sabor de tus besos
-                que con cada uno de ellos me pones a temblar y aceleras a mi corazón a velocidades relativistas al punto
-                de detener el tiempo.
-            </p>
+            <p class="md-body-1 text-justify" style="font-size: 16px;">{{Home.card1}}</p>
         </md-card-content>
     </md-card>
     <md-card>
         <md-card-content>
-            <p class="md-body-1 text-justify" style="font-size: 16px;">Son muchas las sensaciones que siento cuando estoy a tu lado mi novia, mi chaparrita, mi china, mi Monica bienvenida
-                a mi vida, bienvenida a mis sueños, que agradable es encontrarte, hace mucho que te espero, bienvenida a
-                mi alma eres tu lo que mas quiero, con los ojos bien cerrados y con los brazos abiertos desbordado de ilusiones
-                para compartir los días así es como te lo digo para siempre bienvenida.
-            </p>
+            <p class="md-body-1 text-justify" style="font-size: 16px;">{{Home.card2}}</p>
         </md-card-content>
     </md-card>
     <md-card>
         <md-card-content>
-            <p class="md-body-1 text-justify" style="font-size: 16px;">Cariñoso y detallista porque tu te lo mereces, me preocupo por llenarte el corazón de cosas bellas, arroparte
-                en un segundo con caricias que sean dulces, bienvenida seas tu, has llegado justo a tiempo. </p>
+            <p class="md-body-1 text-justify" style="font-size: 16px;">{{Home.card3}}</p>
         </md-card-content>
     </md-card>
     <md-card>
         <img ng-src="img/monica.png" class="md-card-image" alt="Monica">
     </md-card>
     <md-card>
-        <md-card-actions layout="row" layout-align="start center">
-            <md-button ng-href="https://www.google.com.mx" target="_blank" class="md-raised md-accent">Ver código fuente</md-button>
-        </md-card-actions>
         <md-card-content>
-            <p class="md-body-1 text-justify" style="font-size: 16px;">Son muchas las sensaciones que siento cuando estoy a tu lado mi novia, mi chaparrita, mi china, mi Monica bienvenida
-                a mi vida, bienvenida a mis sueños, que agradable es encontrarte, hace mucho que te espero, bienvenida a
-                mi alma eres tu lo que mas quiero, con los ojos bien cerrados y con los brazos abiertos desbordado de ilusiones
-                para compartir los días así es como te lo digo para siempre bienvenida.
-            </p>
+            <p class="md-body-1 text-justify" style="font-size: 16px;">{{Home.card4}}</p>
         </md-card-content>
+        <md-card-actions layout="row" layout-align="center">
+            <md-button ng-href="https://github.com/darciga/10-03-17" target="_blank" class="md-raised md-accent">Ver código fuente</md-button>
+        </md-card-actions>
     </md-card>
     <!-- build:js js/vendor.min.js -->
     <!-- bower:js -->

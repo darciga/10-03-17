@@ -12,7 +12,7 @@
     function Run() {
     }
 
-    angular.module('mony', ['ts.controllers', 'ngMaterial'])
+    angular.module('monica', ['ts.controllers', 'ngMaterial'])
         .config(AppConfig)
         .run(Run);
 
